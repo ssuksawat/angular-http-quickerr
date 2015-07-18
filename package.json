@@ -1,0 +1,31 @@
+{
+  "name": "angular-http-quickerr",
+  "version": "0.1.0",
+  "description": "Simple angular module for handling http error",
+  "main": "angular-http-quickerr.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sompop Suksawat",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-karma": "^0.12.0",
+    "jit-grunt": "^0.9.1",
+    "jshint-stylish": "~0.1.5",
+    "karma": "~0.13.0",
+    "karma-chrome-launcher": "~0.1.3",
+    "karma-firefox-launcher": "~0.1.3",
+    "karma-html2js-preprocessor": "~0.1.0",
+    "karma-jasmine": "~0.1.5",
+    "karma-ng-html2js-preprocessor": "~0.1.0",
+    "karma-phantomjs-launcher": "~0.1.4",
+    "karma-requirejs": "~0.2.1",
+    "karma-script-launcher": "~0.1.0",
+    "requirejs": "~2.1.11",
+    "sinon": "^1.15.4"
+  }
+}

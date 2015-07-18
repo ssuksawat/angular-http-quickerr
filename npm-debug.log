@@ -1,0 +1,118 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 warn package.json angular-http-quickerr@0.1.0 No repository field.
+5 warn package.json angular-http-quickerr@0.1.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ '/Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr',
+7 verbose install   [ 'grunt',
+7 verbose install     'grunt-contrib-clean',
+7 verbose install     'grunt-contrib-jshint',
+7 verbose install     'grunt-contrib-uglify',
+7 verbose install     'grunt-karma',
+7 verbose install     'jit-grunt',
+7 verbose install     'jshint-stylish',
+7 verbose install     'karma-firefox-launcher',
+7 verbose install     'karma-script-launcher',
+7 verbose install     'karma-html2js-preprocessor',
+7 verbose install     'karma-jasmine',
+7 verbose install     'karma-chrome-launcher',
+7 verbose install     'requirejs',
+7 verbose install     'karma-requirejs',
+7 verbose install     'karma-phantomjs-launcher',
+7 verbose install     'karma',
+7 verbose install     'karma-ng-html2js-preprocessor' ] ]
+8 info preinstall angular-http-quickerr@0.1.0
+9 verbose readDependencies using package.json deps
+10 verbose already installed skipping grunt@^0.4.5 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+11 verbose already installed skipping grunt-contrib-clean@~0.5.0 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+12 verbose already installed skipping grunt-contrib-jshint@~0.10.0 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+13 verbose already installed skipping grunt-contrib-uglify@~0.4.0 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+14 verbose already installed skipping grunt-karma@^0.12.0 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+15 verbose already installed skipping jit-grunt@^0.9.1 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+16 verbose already installed skipping jshint-stylish@~0.1.5 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+17 verbose already installed skipping karma-firefox-launcher@~0.1.3 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+18 verbose already installed skipping karma-script-launcher@~0.1.0 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+19 verbose already installed skipping karma-html2js-preprocessor@~0.1.0 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+20 verbose already installed skipping karma-jasmine@~0.1.5 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+21 verbose already installed skipping karma-chrome-launcher@~0.1.3 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+22 verbose already installed skipping requirejs@~2.1.11 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+23 verbose already installed skipping karma-requirejs@~0.2.1 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+24 verbose already installed skipping karma-phantomjs-launcher@~0.1.4 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+25 verbose already installed skipping karma@~0.12.9 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+26 verbose already installed skipping karma-ng-html2js-preprocessor@~0.1.0 /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+27 silly resolved []
+28 info build /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+29 verbose linkStuff [ false, false, false, '/Users/sompopsuksawat/WebDev Workspace' ]
+30 info linkStuff angular-http-quickerr@0.1.0
+31 verbose linkBins angular-http-quickerr@0.1.0
+32 verbose linkMans angular-http-quickerr@0.1.0
+33 verbose rebuildBundles angular-http-quickerr@0.1.0
+34 verbose rebuildBundles [ '.bin',
+34 verbose rebuildBundles   'grunt',
+34 verbose rebuildBundles   'grunt-contrib-clean',
+34 verbose rebuildBundles   'grunt-contrib-jshint',
+34 verbose rebuildBundles   'grunt-contrib-uglify',
+34 verbose rebuildBundles   'grunt-karma',
+34 verbose rebuildBundles   'jit-grunt',
+34 verbose rebuildBundles   'jshint-stylish',
+34 verbose rebuildBundles   'karma',
+34 verbose rebuildBundles   'karma-chrome-launcher',
+34 verbose rebuildBundles   'karma-coffee-preprocessor',
+34 verbose rebuildBundles   'karma-firefox-launcher',
+34 verbose rebuildBundles   'karma-html2js-preprocessor',
+34 verbose rebuildBundles   'karma-jade-preprocessor',
+34 verbose rebuildBundles   'karma-jasmine',
+34 verbose rebuildBundles   'karma-ng-html2js-preprocessor',
+34 verbose rebuildBundles   'karma-phantomjs-launcher',
+34 verbose rebuildBundles   'karma-requirejs',
+34 verbose rebuildBundles   'karma-script-launcher',
+34 verbose rebuildBundles   'requirejs' ]
+35 verbose rebuild bundle /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr/node_modules/karma-coffee-preprocessor
+36 info build /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr/node_modules/karma-coffee-preprocessor
+37 info preinstall karma-coffee-preprocessor@0.2.1
+38 verbose linkStuff [ false,
+38 verbose linkStuff   false,
+38 verbose linkStuff   false,
+38 verbose linkStuff   '/Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr/node_modules' ]
+39 info linkStuff karma-coffee-preprocessor@0.2.1
+40 verbose linkBins karma-coffee-preprocessor@0.2.1
+41 verbose linkMans karma-coffee-preprocessor@0.2.1
+42 verbose rebuildBundles karma-coffee-preprocessor@0.2.1
+43 verbose rebuildBundles [ '.bin', 'coffee-script' ]
+44 info install karma-coffee-preprocessor@0.2.1
+45 info postinstall karma-coffee-preprocessor@0.2.1
+46 verbose rebuild bundle /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr/node_modules/karma-jade-preprocessor
+47 info build /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr/node_modules/karma-jade-preprocessor
+48 info preinstall karma-jade-preprocessor@0.0.11
+49 verbose linkStuff [ false,
+49 verbose linkStuff   false,
+49 verbose linkStuff   false,
+49 verbose linkStuff   '/Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr/node_modules' ]
+50 info linkStuff karma-jade-preprocessor@0.0.11
+51 verbose linkBins karma-jade-preprocessor@0.0.11
+52 verbose linkMans karma-jade-preprocessor@0.0.11
+53 verbose rebuildBundles karma-jade-preprocessor@0.0.11
+54 verbose rebuildBundles [ '.bin', 'jade' ]
+55 info install karma-jade-preprocessor@0.0.11
+56 info postinstall karma-jade-preprocessor@0.0.11
+57 info install angular-http-quickerr@0.1.0
+58 info postinstall angular-http-quickerr@0.1.0
+59 info prepublish angular-http-quickerr@0.1.0
+60 error peerinvalid The package karma does not satisfy its siblings' peerDependencies requirements!
+60 error peerinvalid Peer grunt-karma@0.12.0 wants karma@^0.13.0 || >= 0.14.0-rc.0
+60 error peerinvalid Peer karma-script-launcher@0.1.0 wants karma@>=0.9
+60 error peerinvalid Peer karma-html2js-preprocessor@0.1.0 wants karma@>=0.9
+60 error peerinvalid Peer karma-jasmine@0.1.6 wants karma@>=0.9
+60 error peerinvalid Peer karma-requirejs@0.2.2 wants karma@>=0.9
+60 error peerinvalid Peer karma-phantomjs-launcher@0.1.4 wants karma@>=0.9
+60 error peerinvalid Peer karma-ng-html2js-preprocessor@0.1.2 wants karma@>=0.9
+60 error peerinvalid Peer karma-coffee-preprocessor@0.2.1 wants karma@>=0.11.14
+61 error System Darwin 14.3.0
+62 error command "node" "/usr/local/bin/npm" "install"
+63 error cwd /Users/sompopsuksawat/WebDev Workspace/angular-http-quickerr
+64 error node -v v0.10.33
+65 error npm -v 1.4.28
+66 error code EPEERINVALID
+67 verbose exit [ 1, true ]

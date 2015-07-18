@@ -1,0 +1,26 @@
+{
+  "name": "angular-http-quickerr",
+  "version": "0.1.0",
+  "authors": [
+    "ssuksawat@worcester.edu <ssuksawat21@gmail.com>"
+  ],
+  "description": "Simple angular module for handling http error",
+  "main": "angular-http-quickerr.js",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.3"
+  }
+}
