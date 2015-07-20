@@ -57,7 +57,7 @@ quickErrProvider.setCustomHandler({
 ```
 
 - Use `setResponseFormat` to set the property name of the response JSON to be use as the key - DEFAULT: *'status'*
-  Example response JSON:
+  -  Example response JSON:
 ```json
 {
   "status-code": 400,
@@ -65,7 +65,7 @@ quickErrProvider.setCustomHandler({
   "data": {...}
 }
 ```
-  Set the *key* to match the property that contains your error code
+  -  Set the *key* to match the property that contains your error code
 ```javascript
 quickErrProvider.setResponseFormat({key: 'status-code'});
 ```
@@ -85,7 +85,8 @@ quickErrProvider.setGlobalHandlers({
 
 - `'template'`: String -> message to log
   - Can be plain string, e.g. "Hello, I am your error". Or...
-  - *Template String* to interpolate, e.g. "{{status-code}} - {{description}}". Anything with `{{Property Name}}` will be replaced with the value of that property from the Response JSON
+  - *Template String* to interpolate, e.g. "{{status-code}} - {{description}}". 
+    - Anything with `{{Property Name}}` will be replaced with the value of that property from the Response JSON
   
 - `'postLog'`: Action to perform after logging an error message. There are 3 options
   1. Boolean -> set to `true` to rethrow **rejected** promise
