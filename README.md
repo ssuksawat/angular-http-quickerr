@@ -1,4 +1,4 @@
-# angular-http-quickerr
+# (In progress) angular-http-quickerr
 When working with Angular $http, how often do you write boiler-plate code to log error like this?...
 ```javascript
 angular.module('app').factory('someFactory', function ($http, someLogger) {
