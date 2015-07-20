@@ -92,7 +92,7 @@
 				
 				function interpolateMessage(str, res) {
 					return str.replace(/{{(.*?)}}/g, function (_, prop) {
-						return res[prop] || '';
+						return res[prop] || ''; 
 					});
 				}
 				

@@ -15,7 +15,7 @@ describe('Angular Http QuickErr', function() {
 			mockLocation = {path: sinon.spy()};
 			
 			sinon.spy(console, 'error');
-		})
+		});
 		
 		// Set up module & sample templates
 		beforeEach(module('ngHttpQuickErr', function ($provide, quickErrProvider) {
@@ -61,7 +61,7 @@ describe('Angular Http QuickErr', function() {
 		
 		afterEach(function () {
 			console.error.restore();
-		})
+		});
 		
 		it('should log normal message without extra options', function () {
 			var testRes = {status: 400, description: 'Should NOT log this' };
