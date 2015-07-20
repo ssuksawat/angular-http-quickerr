@@ -20,6 +20,7 @@ var app = angular.module('app', ['ngHttpQuickErr']);
 
 ## Usage
 ### Configure Error Handlers
+
 `'quickErrProvider'` will be injected during angular configuration phase
 ```javascript
 angular.module('app').config(function (quickErrProvider) {
@@ -41,6 +42,7 @@ quickErrProvider.setGlobalHandlers({
   ...
 });
 ```
+
 - Use `setCustomHandlers()` to set error handlers with specific "namespace"
   Format:
 ```javascript
@@ -53,8 +55,9 @@ quickErrProvider.setCustomHandler({
   ...
 });
 ```
+
 - Use `setResponseFormat` to set the property name of the response JSON to be use as the key - DEFAULT: *'status'*
-  - Example response JSON:
+  Example response JSON:
 ```json
 {
   "status-code": 400,
@@ -62,50 +65,71 @@ quickErrProvider.setCustomHandler({
   "data": {...some data...}
 }
 ```
-  - Set the *key*  to match the property that contains your error code
+  Set the *key*  to match the property that contains your error code
 ```javascript
 quickErrProvider.setResponseFormat({key: 'status-code'});
 ```
 
+By default, the module is set to use `console.error` to log error. Here is how to replace the global logger setting,
+```javascript
+quickErrProvider.setGlobalHandlers({
+  DEFAULT: {
+    logger: newLogger.logFunction   //provide function to call to log error
+  }
+});
+```
+**Note:** the module passes 2 argument when calling the log function - message and response object, respectively.
+
+
 ### Configuration Options
+
 - `'template'`: String -> message to log
   - Can be plain string, e.g. "Hello, I am your error". Or...
   - *Template String* to interpolate, e.g. "{{status-code}} - {{description}}". Anything with `{{Property Name}}` will be replaced with the value of that property from the Response JSON
+  
 - `'postLog'`: Action to perform after logging an error message. There are 3 options
-  1. 
-- `'logger'`
+  1. Boolean -> set to `true` to rethrow **rejected** promise
+  2. String -> path to redirect, needs to start with '/'. For example, '/login'
+  3. Function -> default callback function
+
+- `'logger'`: Function -> custom logging function.
+
 
 ### Handle error
+
 Use `'quickErr'` to handle an error. simply call `quickErr.handle()` inside the Angular promise `catch()` or errorCallback block
+
 - handle error with Global settings, pass `handle()` the response object
-  ```javascript
-  angular.module('app').service(function ($http, quickErr) {
-    ...
-    function someFunctionThatCallsHTTP() {
-      $http.get(...)
-        .then(successCallback)
-        .catch(function (res) {
-          quickErr.handle(res);
-        });
-      ;
-    }
-  });
-  ```
+```javascript
+angular.module('app').service(function ($http, quickErr) {
+  ...
+  function someFunctionThatCallsHTTP() {
+    $http.get(...)
+      .then(successCallback)
+      .catch(function (res) {
+        quickErr.handle(res);
+      });
+    ;
+  }
+});
+```
+
 - handle error with Custom settings, pass `handle()` the response object AND namespace
-  ```javascript
-  angular.module('app').service(function ($http, quickErr) {
-    ...
-    function someFunctionThatCallsHTTP() {
-      $http.get(...)
-        .then(successCallback)
-        .catch(function (res) {
-          quickErr.handle(res, 'some-namespace');
-        });
-      ;
-    }
-  });
-  ```
+```javascript
+angular.module('app').service(function ($http, quickErr) {
+  ...
+  function someFunctionThatCallsHTTP() {
+    $http.get(...)
+      .then(successCallback)
+      .catch(function (res) {
+        quickErr.handle(res, 'some-namespace');
+      });
+    ;
+  }
+});
+```
+
 - have *quickErr* call a callback after logging an error. *quickErr* will call the callback function instead of "postLog" action
-  ```javascript
-  quickErr.handle(res, undefined, someCallbackFn);
-  ```
+```javascript
+quickErr.handle(res, undefined, someCallbackFn);
+```
