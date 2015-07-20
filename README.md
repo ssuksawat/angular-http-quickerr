@@ -45,30 +45,30 @@ angular.module('app').config(function (quickErrProvider) {
 
 - Use `setCustomHandlers()` to set error handlers with specific "namespace"
   Format:
-```javascript
-quickErrProvider.setCustomHandler({
-  'some-namespace': {
-    400: {  // This will override global settings if namespace is provided during error handling
+    ```javascript
+    quickErrProvider.setCustomHandler({
+      'some-namespace': {
+        400: {  // This will override global settings if namespace is provided during error handling
+          ...
+        }
+      },
       ...
-    }
-  },
-  ...
-});
-```
+    });
+    ```
 
 - Use `setResponseFormat` to set the property name of the response JSON to be use as the key - DEFAULT: *'status'*
   -  Example response JSON:
-```json
-{
-  "status-code": 400,
-  "description": "This is a 400 error",
-  "data": {...}
-}
-```
+    ```json
+    {
+      "status-code": 400,
+      "description": "This is a 400 error",
+      "data": {...}
+    }
+    ```
   -  Set the *key* to match the property that contains your error code
-```javascript
-quickErrProvider.setResponseFormat({key: 'status-code'});
-```
+    ```javascript
+    quickErrProvider.setResponseFormat({key: 'status-code'});
+    ```
 
 **Note:**
 By default, the module is set to use `console.error` to log error. The module passes 2 argument when calling the log function - message and response object, respectively. 
@@ -103,36 +103,36 @@ quickErrProvider.setGlobalHandlers({
 Use `'quickErr'` to handle an error. simply call `quickErr.handle()` inside the Angular promise `catch()` or errorCallback block
 
 - handle error with Global settings, pass `handle()` the response object
-```javascript
-angular.module('app').service(function ($http, quickErr) {
-  ...
-  function someFunctionThatCallsHTTP() {
-    $http.get(...)
-      .then(successCallback)
-      .catch(function (res) {
-        quickErr.handle(res);
-      });
-    ;
-  }
-});
-```
+    ```javascript
+    angular.module('app').service(function ($http, quickErr) {
+      ...
+      function someFunctionThatCallsHTTP() {
+        $http.get(...)
+          .then(successCallback)
+          .catch(function (res) {
+            quickErr.handle(res);
+          });
+        ;
+      }
+    });
+    ```
 
 - handle error with Custom settings, pass `handle()` the response object AND namespace
-```javascript
-angular.module('app').service(function ($http, quickErr) {
-  ...
-  function someFunctionThatCallsHTTP() {
-    $http.get(...)
-      .then(successCallback)
-      .catch(function (res) {
-        quickErr.handle(res, 'some-namespace');
-      });
-    ;
-  }
-});
-```
+    ```javascript
+    angular.module('app').service(function ($http, quickErr) {
+      ...
+      function someFunctionThatCallsHTTP() {
+        $http.get(...)
+          .then(successCallback)
+          .catch(function (res) {
+            quickErr.handle(res, 'some-namespace');
+          });
+        ;
+      }
+    });
+    ```
 
 - have *quickErr* call a callback after logging an error. *quickErr* will call the callback function instead of "postLog" action
-```javascript
-quickErr.handle(res, undefined, someCallbackFn);
-```
+    ```javascript
+    quickErr.handle(res, undefined, someCallbackFn);
+    ```
