@@ -32,7 +32,7 @@ angular.module('app').config(function (quickErrProvider) {
     ```javascript
     quickErrProvider.setGlobalHandlers({
       400: {
-        //See "Options" section below for description
+        //See "Configuration Options" section below for description
         template: 'This is a {{status}}: {{description}}',
         postLog: true
         logger: customLogger.error
@@ -67,9 +67,12 @@ angular.module('app').config(function (quickErrProvider) {
     quickErrProvider.setResponseFormat({key: 'status-code'});
     ```
 
-### Options
-- `'template'`
-- `'postLog'`
+### Configuration Options
+- `'template'`: String -> message to log
+  - Can be plain string, e.g. "Hello, I am your error". Or...
+  - *Template String* to interpolate, e.g. "{{status-code}} - {{description}}". Anything with `{{Property Name}}` will be replaced with the value of that property from the Response JSON
+- `'postLog'`: Action to perform after logging an error message. There are 3 options
+  1. 
 - `'logger'`
 
 ### Handle error
@@ -101,4 +104,8 @@ Use `'quickErr'` to handle an error. simply call `quickErr.handle()` inside the 
       ;
     }
   });
+  ```
+- have *quickErr* call a callback after logging an error. *quickErr* will call the callback function instead of "postLog" action
+  ```javascript
+  quickErr.handle(res, undefined, someCallbackFn);
   ```
