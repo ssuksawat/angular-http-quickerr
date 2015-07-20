@@ -31,7 +31,7 @@ YES! This module will allow you to pre-define error handlers as JSON, and then r
 
 ## Getting started
 
-1) Download this repository...(Bower coming soon! Need to run some more tests)
+1) Download this repository...(Bower coming soon! Need to add some more parameter validations)
 
 2) Include script
 ```html
