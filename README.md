@@ -27,7 +27,7 @@ Wouldn't you rather be doing this?...
   });
 ```
 
-YES! This module will allow you to pre-define error handlers as JSON, and then replace your super long boiler-plate error handling code with a one-liner!
+YES! This module will allow you to pre-define error handlers as simple JavaScript object, and then replace your super long boiler-plate error handling code with a one-liner!
 
 ## Getting started
 
