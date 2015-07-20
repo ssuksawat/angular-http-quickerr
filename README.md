@@ -61,8 +61,8 @@ quickErrProvider.setCustomHandler({
 ```json
 {
   "status-code": 400,
-  "description": "This is a 400 error"
-  "data": {test: 'test'}
+  "description": "This is a 400 error",
+  "data": {...}
 }
 ```
   Set the *key* to match the property that contains your error code
