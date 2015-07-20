@@ -1,5 +1,33 @@
 # angular-http-quickerr
-Simple angular module for handling http error response
+When working with Angular $http, how often do you write boiler-plate code to log error like this?...
+```javascript
+angular.module('app').factory('someFactory', function ($http, someLogger) {
+  ...
+  $http.get(...).then(successCallback, errorCallback);
+  ...
+  function errorCallback (response) {
+    if (response.status === 404) {
+      //do something
+    }
+    if (response.status === 500) {
+      //do another
+    }
+    //...and so on~
+  }
+});
+```
+Wouldn't you rather be doing this?...
+```javascript
+  angular.module('app').factory('someFactory', function ($http, quickErr) {
+    ...
+    ...
+    function errorCallback (response) {
+      quickErr.handle(response);  // THIS!!
+    }
+  });
+```
+
+YES! This module will allow you to pre-define error handlers as JSON, and then replace your super long boiler-plate error handling code with a one-liner!
 
 ## Getting started
 
@@ -100,7 +128,7 @@ quickErrProvider.setGlobalHandlers({
 
 ### Handle error
 
-Use `'quickErr'` to handle an error. simply call `quickErr.handle()` inside the Angular promise `catch()` or errorCallback block
+As seen in the example above, use `'quickErr'` service to handle an error. simply call `quickErr.handle()` inside the Angular promise `catch()` or errorCallback block
 
 - handle error with Global settings, pass `handle()` the response object
     ```javascript
