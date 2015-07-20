@@ -70,7 +70,10 @@ quickErrProvider.setCustomHandler({
 quickErrProvider.setResponseFormat({key: 'status-code'});
 ```
 
-By default, the module is set to use `console.error` to log error. Here is how to replace the global logger setting,
+**Note:**
+By default, the module is set to use `console.error` to log error. The module passes 2 argument when calling the log function - message and response object, respectively. 
+
+Here is how to replace the global logger setting,
 ```javascript
 quickErrProvider.setGlobalHandlers({
   DEFAULT: {
@@ -78,7 +81,6 @@ quickErrProvider.setGlobalHandlers({
   }
 });
 ```
-**Note:** the module passes 2 argument when calling the log function - message and response object, respectively.
 
 
 ### Configuration Options
