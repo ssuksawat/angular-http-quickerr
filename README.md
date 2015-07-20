@@ -1,5 +1,5 @@
 # (In progress) angular-http-quickerr
-When working with Angular $http, how often do you write boiler-plate code to log error like this?...
+When working with Angular $http, how often do you write boiler-plate code to log an error like this?...
 ```javascript
 angular.module('app').factory('someFactory', function ($http, someLogger) {
   ...
@@ -27,7 +27,7 @@ Wouldn't you rather be doing this?...
   });
 ```
 
-YES! This module will allow you to pre-define error handlers as simple JavaScript object, and then replace your super long boiler-plate error handling code with a one-liner!
+YES! This module will allow you to pre-define error handlers as simple JSON, and then replace your super long boiler-plate error handling code with a one-liner!
 
 ## Getting started
 
