@@ -30,18 +30,18 @@ angular.module('app').config(function (quickErrProvider) {
 
 - Use `setGlobalHandlers()` to set default handlers to be use across the app
   Format:
-```javascript
-quickErrProvider.setGlobalHandlers({
-  400: {
-    //See "Configuration Options" section below for description
-    template: 'This is a {{status}}: {{description}}',
-    postLog: true
-    logger: customLogger.error
-  },
-  ...
-  ...
-});
-```
+    ```javascript
+    quickErrProvider.setGlobalHandlers({
+      400: {
+        //See "Configuration Options" section below for description
+        template: 'This is a {{status}}: {{description}}',
+        postLog: true
+        logger: customLogger.error
+      },
+      ...
+      ...
+    });
+    ```
 
 - Use `setCustomHandlers()` to set error handlers with specific "namespace"
   Format:
