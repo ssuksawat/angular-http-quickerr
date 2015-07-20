@@ -28,44 +28,44 @@ angular.module('app').config(function (quickErrProvider) {
 ```
 
 - Use `setGlobalHandlers()` to set default handlers to be use across the app
-  - Format:
-    ```javascript
-    quickErrProvider.setGlobalHandlers({
-      400: {
-        //See "Configuration Options" section below for description
-        template: 'This is a {{status}}: {{description}}',
-        postLog: true
-        logger: customLogger.error
-      },
-      ...
-      ...
-    });
-    ```
+  Format:
+```javascript
+quickErrProvider.setGlobalHandlers({
+  400: {
+    //See "Configuration Options" section below for description
+    template: 'This is a {{status}}: {{description}}',
+    postLog: true
+    logger: customLogger.error
+  },
+  ...
+  ...
+});
+```
 - Use `setCustomHandlers()` to set error handlers with specific "namespace"
-  - Format:
-    ```javascript
-    quickErrProvider.setCustomHandler({
-      'some-namespace': {
-        400: {  // This will override global settings if namespace is provided during error handling
-          ...
-        }
-      },
+  Format:
+```javascript
+quickErrProvider.setCustomHandler({
+  'some-namespace': {
+    400: {  // This will override global settings if namespace is provided during error handling
       ...
-    });
-    ```
+    }
+  },
+  ...
+});
+```
 - Use `setResponseFormat` to set the property name of the response JSON to be use as the key - DEFAULT: *'status'*
   - Example response JSON:
-    ```json
-    {
-      "status-code": 400,
-      "description": "This is a 400 error"
-      "data": {...some data...}
-    }
-    ```
+```json
+{
+  "status-code": 400,
+  "description": "This is a 400 error"
+  "data": {...some data...}
+}
+```
   - Set the *key*  to match the property that contains your error code
-    ```javascript
-    quickErrProvider.setResponseFormat({key: 'status-code'});
-    ```
+```javascript
+quickErrProvider.setResponseFormat({key: 'status-code'});
+```
 
 ### Configuration Options
 - `'template'`: String -> message to log
