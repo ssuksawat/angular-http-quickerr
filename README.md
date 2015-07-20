@@ -62,10 +62,10 @@ quickErrProvider.setCustomHandler({
 {
   "status-code": 400,
   "description": "This is a 400 error"
-  "data": {...some data...}
+  "data": {test: 'test'}
 }
 ```
-  Set the *key*  to match the property that contains your error code
+  Set the *key* to match the property that contains your error code
 ```javascript
 quickErrProvider.setResponseFormat({key: 'status-code'});
 ```
