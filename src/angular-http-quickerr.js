@@ -7,7 +7,7 @@
 	'use strict';
 	
 	angular.module('ngHttpQuickErr', [])
-		.provider('quickErr', function($provide) {
+		.provider('quickErr', ['$provide', function($provide) {
 			var config = {
 				key: 'status'
 			};
@@ -25,7 +25,7 @@
 				setResponseFormat: setResponseConfig,
 				setGlobalHandlers: setGlobalHandlers,
 				setCustomHandlers: setCustomHandlers,
-				$get: instantiateFactory
+				$get: ['$q', '$location', instantiateFactory]
 			};
 			
 			/* ----- PUBLIC ----- */
@@ -128,6 +128,6 @@
 				
 			}
 			
-		});
+		}]);
 	
 }());
