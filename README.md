@@ -160,7 +160,7 @@ As seen in the example above, use `'quickErr'` service to handle an error. simpl
     });
     ```
 
-- have *quickErr* call a callback after logging an error. *quickErr* will call the callback function instead of "postLog" action
+- Provide a callback to call after logging an error. *quickErr* will call the callback function **instead of** "postLog" action
     ```javascript
     quickErr.handle(res, undefined, someCallbackFn);
     ```
