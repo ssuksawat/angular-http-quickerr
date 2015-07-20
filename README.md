@@ -36,7 +36,7 @@ YES! This module will allow you to pre-define error handlers as JSON, and then r
 2) Include script
 ```html
 ...
-<script src="PATH/TO/SCRIPT/angular-http-quickerr.min.js"></script>
+<script src="PATH/TO/SCRIPT/dist/angular-http-quickerr.min.js"></script>
 ...
 ```
 
