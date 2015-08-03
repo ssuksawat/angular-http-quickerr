@@ -1,5 +1,5 @@
 /**
- * Author: Sompop Suksawat (ssuksawat21@gmail.com)
+ * @author: Sompop Suksawat <ssuksawat21@gmail.com>
  */
 
 (function(){
