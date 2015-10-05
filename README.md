@@ -16,13 +16,19 @@ angular.module('app').factory('someFactory', function ($http, someLogger) {
   }
 });
 ```
-Wouldn't you rather be doing this?...
+Wouldn't you rather do this?...
 ```javascript
+  //Handle Globally with interceptor
+  angular.module('app').config($httpProvider) {
+    $httpProvider.interceptors.push('quickErr');
+  }
+
+  //OR handle it individually with Namespace
   angular.module('app').factory('someFactory', function ($http, quickErr) {
     ...
     ...
     function errorCallback (response) {
-      quickErr.handle(response);  // THIS!!
+      quickErr.handle(response, 'SOME_ERROR_CODE');  // THIS!!
     }
   });
 ```
