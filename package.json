@@ -4,6 +4,10 @@
   "description": "Simple angular module for handling http error",
   "main": "angular-http-quickerr.js",
   "author": "Sompop Suksawat (ssuksawat21@gmail.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssuksawat/angular-http-quickerr"
+  },
   "license": "",
   "devDependencies": {
     "grunt": "^0.4.5",
