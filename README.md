@@ -1,4 +1,4 @@
-# (In progress) angular-http-quickerr
+# angular-http-quickerr
 When working with Angular $http, how often do you write boiler-plate code to log an error like this?...
 ```javascript
 angular.module('app').factory('someFactory', function ($http, someLogger) {
@@ -31,7 +31,11 @@ YES! This module will allow you to pre-define error handlers as simple JSON, and
 
 ## Getting started
 
-1) Download this repository...(Bower coming soon! Need to add some more parameter validations)
+1) Download this repository, or install with Bower
+
+```
+bower install --save angular-http-quickerr
+```
 
 2) Include script
 ```html
