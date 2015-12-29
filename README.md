@@ -1,4 +1,4 @@
-# angular-http-quickerr
+# angular-http-quickerr [DEPRECATED/UNMAINTAINED]
 When working with Angular $http, how often do you write boiler-plate code to log an error like this?...
 ```javascript
 angular.module('app').factory('someFactory', function ($http, someLogger) {
@@ -19,9 +19,9 @@ angular.module('app').factory('someFactory', function ($http, someLogger) {
 Wouldn't you rather do this?...
 ```javascript
   //Handle Globally with interceptor
-  angular.module('app').config($httpProvider) {
+  angular.module('app').config(function ($httpProvider) {
     $httpProvider.interceptors.push('quickErr');
-  }
+  });
 
   //OR handle it with optional Namespace for more specific cases
   angular.module('app').factory('someFactory', function ($http, quickErr) {
@@ -37,11 +37,12 @@ YES! This module will allow you to pre-define error handlers as simple JSON, and
 
 ## Getting started
 
-1) Download this repository, or install with Bower
+1) Download this repository, or ~~install with Bower~~
 
 ```
-bower install --save angular-http-quickerr
+bower install --save angular-http-quickerr   #UNREGISTERED
 ```
+
 
 2) Include script
 ```html
